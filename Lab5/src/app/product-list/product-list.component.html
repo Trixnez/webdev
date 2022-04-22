@@ -1,0 +1,38 @@
+<h2>Products</h2>
+<button type="button" class="btn btnall" (click)="onClick('all')">
+  All
+</button>
+<button type="button" class="btn btnl" (click)="onClick('laptop')">
+  Laptops
+</button>
+<button type="button" class="btn btns" (click)="onClick('smart')">
+  Smartphones
+</button>
+<button type="button" class="btn btnh" (click)="onClick('headp')">
+  Headphones
+</button>
+<button type="button" class="btn btnt" (click)="onClick('tabl')">
+  Tablets
+</button>
+<button type="button" class="btn btnw" (click)="onClick('watch')">
+  SmartWatches
+</button>
+<script src="src/product-list/product-list.companent.js"></script>
+<div *ngFor="let product of products">
+  <div *ngIf="product && (genCat == product.category || genCat == 'all') ">
+    <h3>
+      <a href="{{ product.link }}" [title]="product.name + ' details'">
+        {{ product.name }}
+      </a>
+    </h3>
+    <p *ngIf="product.description">Description: {{ product.description }}</p>
+    <p *ngIf="product.price">Price: ${{ product.price }}</p>
+    <p *ngIf="product.rating">Rating: {{ product.rating }}</p>
+    <button *ngIf="product.likes" type="button" class = "btn-cl" (click)="likes(product)" >Likes: {{ product.likes }}</button>
+    <a><img src="{{ product.image }}" width="400px" /></a>
+    <a *ngIf="product.link" href="https://t.me/share?url={{ product.link }}">
+      <button type="button">Share</button></a>
+    <app-product-alerts [product]="product" (notify)="onNotify()">
+    </app-product-alerts>
+  </div>
+</div>

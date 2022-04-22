@@ -1,0 +1,411 @@
+export interface Product {
+  id: number;
+  name: string;
+  price: number;
+  description: string;
+  rating: string;
+  image: string;
+  link: string;
+  category:string;
+  likes: number;
+  flaglike: boolean;
+}
+
+export const products = [
+  {
+    id: 1,
+    name: 'HP 15 Laptop',
+    price: 455,
+    description:
+    'Series	HP Laptop 15-ef2024nr; Brand	HP; Specific Uses For Product	Personal, Student, Business; Screen Size	15 Inches; Operating System	Windows 11 Home; CPU Manufacturer	AMD; Card Description	Integrated; Special Feature	Operating system: Windows 11 Home, Internal storage: 256 GB PCIe NVMe M.2 SSD, Memory: 8 GB DDR4-3200 MHz RAM (1 X 8 GB), Display: 15.6-inch diagonal, HD (1366 x 768), micro-edge, BrightView, Processor: AMD Ryzen 3 5300U; Color	Natural silver; Connectivity Technology	Bluetooth, Wi-Fi, USB, HDMI',
+    rating: '4.5 / 5',
+    image: 'https://m.media-amazon.com/images/I/81vZsNmHMwL._AC_SL1500_.jpg',
+    link: 'https://www.amazon.com/HP-Processor-Micro-Edge-Long-Lasting-15-ef2024nr/dp/B09J1PS4TG/ref=sr_1_17?qid=1647081232&rnid=13896617011&s=computers-intl-ship&sr=1-17&th=1',
+    category: 'laptop',
+    likes: 7063,
+    flaglike: false,
+  },
+  {
+    id: 2,
+    name: 'ASUS VivoBook 15 OLED K513 Thin & Light Laptop',
+    price: 859,
+    description:
+      'Series ASUS VivoBook 15 Laptop; Brand ASUS; Specific Uses For Product Personal, Student, Business; Screen Size 15.6 Inches; Operating System Windows 10 Home; Human Interface Input Keyboard; CPU Manufacturer Intel; Card Description Intel Iris Xe; Special Feature OLED Display; Color Indie Black',
+    rating: '3.9 / 5',
+    image: 'https://m.media-amazon.com/images/I/810JYMXVRuL._AC_SL1500_.jpg',
+    link: 'https://www.amazon.com/ASUS-VivoBook-i5-1135G7-Fingerprint-K513EA-AB54/dp/B09DDG1VXL/ref=sr_1_54?qid=1647082509&rnid=13896617011&s=computers-intl-ship&sr=1-54&th=1',
+    category: 'laptop',
+    likes: 8419,
+    flaglike: false,
+  },
+  {
+    id: 3,
+    name: 'ASUS ROG Strix G15 (2021) Gaming Laptop',
+    price: 1999,
+    description:
+      'Series ROG Strix G15; Brand ASUS; Specific Uses For Product Personal, Gaming, Business; Screen Size 15.6 Inches; Operating System Windows 10 Home; Human Interface Input Keyboard; CPU Manufacturer AMD; Card Description GeForce RTX 3070; Color Original Black; Connectivity Technology Bluetooth, Wi-Fi, USB, Ethernet, HDMI',
+    rating: '4.5 / 5',
+    image: 'https://m.media-amazon.com/images/I/81Cm1VMdxrL._AC_SL1500_.jpg',
+    link: 'https://www.amazon.com/ASUS-Display-R9-5900HX-Keyboard-G513QR-ES96/dp/B08SJTW9LK/ref=sr_1_73?qid=1647082880&rnid=13896617011&s=computers-intl-ship&sr=1-73',
+    category: 'laptop',
+    likes: 7358,
+    flaglike: false,
+  },
+  {
+    id: 4,
+    name: 'Razer Blade 15 Gaming Laptop',
+    price: 2555,
+    description:
+      'Series Blade 15; Brand Razer; Specific Uses For Product Personal, Gaming, Business; Screen Size 15.6 Inches; Operating System Windows 10 Home; Human Interface Input Keyboard; CPU Manufacturer Intel; Card Description RTX 3070; Color Black; Connectivity Technology Bluetooth, Wi-Fi, USB, HDMI',
+    rating: '4.4 / 5',
+    image: 'https://m.media-amazon.com/images/I/71kcJxMggRL._AC_SL1500_.jpg',
+    link: 'https://www.amazon.com/Razer-Blade-Advanced-Gaming-Laptop/dp/B08SJJ9MQ5/ref=sr_1_74?qid=1647109101&rnid=13896617011&s=computers-intl-ship&sr=1-74&th=1',
+    category: 'laptop',
+    likes: 1841,
+    flaglike: false,
+  },
+  {
+    id: 5,
+    name: 'Lenovo IdeaPad 3 15.6" HD (1366x768) Touchscreen Laptop',
+    price: 583,
+    description:
+      'Series 81WR000AUS; Brand Lenovo; Specific Uses For Product Personal, Student, Business; Screen Size 15.6 Inches; Operating System Windows 10 Home; Human Interface Input Touchscreen, Microphone; CPU Manufacturer Intel; Card Description Integrated; Connectivity Technology Wi-Fi; Hard Disk Size 512 GB',
+    rating: '4.6 / 5',
+    image: 'https://m.media-amazon.com/images/I/71QLVOeWtzS._AC_SL1500_.jpg',
+    link: 'https://www.amazon.com/Lenovo-IdeaPad-1366x768-Touchscreen-i5-10210U/dp/B091KHLNWY/ref=sr_1_73?qid=1647109337&rnid=13896617011&s=computers-intl-ship&sr=1-73',
+    category: 'laptop',
+    likes: 6259,
+    flaglike: false,
+  },
+  {
+    id: 6,
+    name: 'ASUS VivoBook 15 M515 Thin and Light Laptop',
+    price: 629,
+    description:
+      'Series VivoBook 15; Brand ASUS; Specific Uses For Product Multimedia, Personal, Business; Screen Size 15.6 Inches; Operating System Windows 10 Home; Human Interface Input Keyboard; CPU Manufacturer AMD; Card Description Integrated; Color Gray; Connectivity Technology Bluetooth, Wi-Fi, USB, HDMI',
+    rating: '4.6 / 5',
+    image: 'https://m.media-amazon.com/images/I/71bzKR1IZkL._AC_SL1500_.jpg',
+    link: 'https://www.amazon.com/ASUS-VivoBook-Display-Fingerprint-M515UA-EB72/dp/B099XCXZCJ/ref=sr_1_83?qid=1647110019&rnid=13896617011&s=computers-intl-ship&sr=1-83&th=1',
+    category: 'laptop',
+    likes: 4190,
+    flaglike: false,
+  },
+  {
+    id: 7,
+    name: 'Apple MacBook Pro 13-inch MD313LL/A (4GB RAM, 500GB HD, macOS 10.13)',
+    price: 230,
+    description:
+      'Series IPad; Brand Apple; Screen Size 9.7 Inches; Operating System MacOS 10.13 High Sierra; CPU Manufacturer Intel; Color Silver; Hard Disk Size 500 GB; Processor Count 1 CPU; Model Unknown; Item Weight 4.8 Pounds',
+    rating: '3,8 / 5',
+    image: 'https://m.media-amazon.com/images/I/71k5eyE2z9S._AC_SL1500_.jpg',
+    link: 'https://www.amazon.com/Apple-MacBook-MD313LL-500GB-macOS/dp/B07MWFZRNP/ref=sr_1_2?crid=S4VIUY8YBIQZ&keywords=macbook&qid=1646858949&sprefix=%2Caps%2C226&sr=8-2',
+    category: 'laptop',
+    likes: 27,
+    flaglike: false,
+  },
+  {
+    id: 8,
+    name: 'Apple 13in MacBook Pro',
+    price: 519,
+    description:
+      'Series FBA_MPXQ2LL/A; Brand Apple; Screen Size 13.3 Inches; Operating System MacOS 10.14 Mojave; Human Interface Input Touch Pad; CPU Manufacturer Intel; Card Description Integrated; Color Space Grey; Hard Disk Size 128 GB; Processor Count 2',
+    rating: '4.1 / 5',
+    image: 'https://m.media-amazon.com/images/I/71nM55mRvxL._AC_SL1475_.jpg',
+    link: 'https://www.amazon.com/Apple-MacBook-Display-MPXQ2LL-Refurbished/dp/B078GX9R5W/ref=sr_1_3?crid=S4VIUY8YBIQZ&keywords=macbook&qid=1646858949&sprefix=%2Caps%2C226&sr=8-3',
+    category: 'laptop',
+    likes: 4461, 
+    flaglike: false,
+  },
+  {
+    id: 9,
+    name: 'Newest MSI GF63 Premium Gaming Laptop',
+    price: 899,
+    description:
+      'Brand MSI; Specific Uses For Product Gaming; Screen Size 15.6 Inches; Operating System Windows 10; Human Interface Input Touchscreen; CPU Manufacturer Intel; Card Description Dedicated; Color Black; Hard Disk Size 1 TB; Processor Count 4' ,
+    rating: '4.3 / 5',
+    image: 'https://m.media-amazon.com/images/I/716sWoIVxDS._AC_SL1500_.jpg',
+    link: 'amazon.com/MSI-Thin-Bezel-Quad-Core-i5-10300H-Keyboard/dp/B098JFL5DK/ref=sr_1_104?qid=1647110486&rnid=13896617011&s=computers-intl-ship&sr=1-104&th=1',
+    category: 'laptop',
+    likes: 8018, 
+    flaglike: false,
+  },
+  {
+    id: 10,
+    name: 'Lenovo Ideapad L340 Gaming Laptop',
+    price: 758,
+    description:
+      'Series L340 Gaming; Brand Lenovo; Specific Uses For Product Personal, Gaming; Screen Size 15.6 Inches; Operating System Windows 10; Human Interface Input Keypad; CPU Manufacturer Intel; Card Description Dedicated; Color Black; Connectivity Technology Bluetooth, HDMI'  ,
+    rating: '4.5 / 5',
+    image: 'https://m.media-amazon.com/images/I/71Aoh+S2ZIL._AC_SL1500_.jpg',
+    link: 'https://www.amazon.com/Lenovo-Ideapad-i5-9300H-Processor-81LK00HDUS/dp/B07VC55LF5/ref=sr_1_129?qid=1647111077&rnid=13896617011&s=computers-intl-ship&sr=1-129',
+    category: 'laptop',
+    likes: 4476,
+    flaglike: false,
+  },
+  {
+    id: 11,
+    name: 'Nokia G50 5G',
+    price: 299,
+    description:
+      'Model Name	Nokia G50; Wireless Carrier	Unlocked; Brand	Nokia; Form Factor	Bar; Memory Storage Capacity	128 GB; Operating System	Android 11.0; Color	Ocean Blue; Cellular Technology	5G, 4G LTE; SIM card slot count	Single SIM; Year	2021'  ,
+    rating: '4 / 5',
+    image: 'https://m.media-amazon.com/images/I/51vf1R1wS9L._AC_SL1080_.jpg',
+    link: 'https://www.amazon.com/Nokia-Android-Unlocked-Smartphone-6-82-Inch/dp/B09GW969LH/ref=sr_1_49?qid=1647174077&rnid=2811119011&s=electronics&sr=1-49&th=1',
+    category: 'smart',
+    likes: 2979, 
+    flaglike: false,
+  },
+  {
+    id: 12,
+    name: 'Xiaomi 11T PRO 5G',
+    price: 549,
+    description:
+      'Model Name	Mi 11T pro 5g; Wireless Carrier	Unlocked for All Carriers; Brand	Xiaomi; Form Factor	Smartphone; Memory Storage Capacity	8 GB; Operating System	Android; Color	Meteorite Gray; Cellular Technology	5G; Year	2021; '  ,
+    rating: '3.5 / 5',
+    image: 'https://m.media-amazon.com/images/I/41A0PmK5ftL._AC_.jpg',
+    link: 'https://www.amazon.com/Xiaomi-Compatible-Verizon-Unlocked-Meteorite/dp/B09QK4754N/ref=sr_1_75?qid=1647176005&rnid=2811119011&s=electronics&sr=1-75',
+    category: 'smart',
+    likes: 6330, 
+    flaglike: false,
+  },
+  {
+    id: 13,
+    name: 'Xiaomi Note 10 5G',
+    price: 206,
+    description:
+      'Model Name	MZB08Z1EU; Wireless Carrier	Unlocked for All Carriers; Brand	Xiaomi; Form Factor	Smartphone; Memory Storage Capacity	128 GB; Operating System	Android; Color	Graphite Gray; Cellular Technology	4G; SIM card slot count	Dual SIM; Year	2021'  ,
+    rating: '4.4 / 5',
+    image: 'https://m.media-amazon.com/images/I/719LT7l2iqS._AC_SL1500_.jpg',
+    link: 'https://www.amazon.com/Xiaomi-Unlocked-Worldwide-Verizon-Graphite/dp/B094XYSCBT/ref=sr_1_81?qid=1647175010&rnid=2811119011&s=electronics&sr=1-81',
+    category: 'smart',
+    likes: 3014,
+    flaglike: false,
+  },
+  {
+    id: 14,
+    name: 'Sony WH-1000XM4',
+    price: 185,
+    description:
+      'Brand	Sony; Ear Placement	Over Ear; Color	Black; Connectivity Technology	Wireless; Model Name	WH1000XM4/B'  ,
+    rating: '4.7 / 5',
+    image: 'https://m.media-amazon.com/images/I/71o8Q5XJS5L._AC_SL1500_.jpg',
+    link: 'https://www.amazon.com/Sony-WH-1000XM4-Canceling-Headphones-phone-call/dp/B0863TXGM3/ref=sr_1_3?qid=1647178455&s=electronics&sr=1-3&th=1',
+    category: 'headp',
+    likes: 3989,
+    flaglike: false,
+  },
+  {
+    id: 15,
+    name: 'Panasonic ErgoFit',
+    price: 12,
+    description:
+      'Brand	Panasonic; Color	Black; Connectivity Technology	Wired; Model Name	RP-TCM125; Form Factor	In Ear'  ,
+    rating: '4.3 / 5',
+    image: 'https://m.media-amazon.com/images/I/61iWIVQvWbL._AC_SL1316_.jpg',
+    link: 'https://www.amazon.com/Headphones-Microphone-Controller-Compatible-Blackberry/dp/B00E4LGVUO/ref=sr_1_19?qid=1647178614&s=electronics&sr=1-19&th=1',
+    category: 'headp',
+    likes: 1409,
+    flaglike: false,
+  },
+  {
+    id: 16,
+    name: 'JBL Tune 510BT',
+    price: 50,
+    description:
+      'Brand	JBL; Color	Blue; Connectivity Technology	Wireless; Model Name	JBL TUNE 510BT - Blue; Form Factor	On Ear'  ,
+    rating: '4.6 / 5',
+    image: 'https://m.media-amazon.com/images/I/61f6S+WtUKL._AC_SL1500_.jpg',
+    link: 'https://www.amazon.com/JBL-Tune-510BT-Ear-Headphones/dp/B08WM1V5P1/ref=sr_1_28?qid=1647178800&s=electronics&sr=1-28',
+    category: 'headp',
+    likes: 4890,
+    flaglike: false,
+  },
+  {
+    id: 17,
+    name: 'Skullcandy Crusher Wireless',
+    price: 89,
+    description:
+      'Brand	Skullcandy; Ear Placement	Over Ear; Color	Black; Connectivity Technology	Wireless; Model Name	Crusher',
+    rating: '4.6 / 5',
+    image: 'https://m.media-amazon.com/images/I/71QbbvhjDcL._AC_SL1500_.jpg',
+    link: 'https://www.amazon.com/Skullcandy-Bluetooth-Headphone-Microphone-Adjustable/dp/B01DWH77GC/ref=sr_1_39?qid=1647178800&s=electronics&sr=1-39&th=1',
+    category: 'headp',
+    likes: 9524,
+    flaglike: false,
+  },
+  {
+    id: 18,
+    name: 'SENNHEISER HD 660 S',
+    price: 400,
+    description:
+      'Brand	Sennheiser Consumer Audio; Ear Placement	On Ear;Color	Black; Connectivity Technology	Wired;Model Name	HD 660 S',
+    rating: '4.8 / 5',
+    image: 'https://m.media-amazon.com/images/I/81ydKOdA0sL._AC_SL1500_.jpg',
+    link: 'https://www.amazon.com/Sennheiser-HD-660-Audiophile-Headphone/dp/B076HP574T/ref=sr_1_55?qid=1647179075&s=electronics&sr=1-55',
+    category: 'headp',
+    likes: 1708,
+    flaglike: false,
+  },
+  {
+    id: 19,
+    name: 'Samsung Galaxy Tab S6 Lite',
+    price: 299,
+    description:
+      'Series	Samsung Galaxy Tab S6 Lite WiFi;Brand	Samsung Electronics; Screen Size	10.4; Operating System	Android; Memory Storage Capacity	64 GB',
+    rating: '4.8 / 5',
+    image: 'https://m.media-amazon.com/images/I/415G0bg-hiL._AC_SL1000_.jpg',
+    link: 'https://www.amazon.com/Samsung-Galaxy-Lite-Tablet-Angora/dp/B086Z3S3MY/ref=sr_1_4?qid=1647180220&rnid=13896617011&s=electronics&sr=1-4',
+    category: 'tabl',
+    likes: 2653,
+    flaglike: false,
+  },
+  {
+    id: 20,
+    name: 'Samsung Galaxy Tab S8+',
+    price: 900,
+    description:
+      'Series	Tablet S8+; Brand	Samsung Electronics; Screen Size	12.4 Inches; Operating System	Android; Memory Storage Capacity	12',
+    rating: '4.6 / 5',
+    image: 'https://m.media-amazon.com/images/I/81XE3+Sjc6L._AC_SL1500_.jpg',
+    link: 'https://www.amazon.com/Samsung-Android-Storage-Included-Graphite/dp/B09NQN4679/ref=sr_1_8?qid=1647180220&rnid=13896617011&s=electronics&sr=1-8&th=1',
+    category: 'tabl',
+    likes: 3224,
+    flaglike: false,
+  },
+  {
+    id: 21,
+    name: 'Microsoft Surface Pro',
+    price: 816,
+    description:
+      'Series	Surface Pro LTE; Brand	Microsoft; Generation	5th Generation; Screen Size	12.3 Inches; Operating System	Windows 10 Professional',
+    rating: '4.6 / 5',
+    image: 'https://m.media-amazon.com/images/I/61RI4MoDGkL._AC_SL1200_.jpg',
+    link: 'https://www.amazon.com/Microsoft-Surface-Intel-Newest-Version/dp/B078Z37H9T/ref=sr_1_23?qid=1647180220&rnid=13896617011&s=electronics&sr=1-23',
+    category: 'tabl',
+    likes: 5397,
+    flaglike: false,
+  },
+  {
+    id: 22,
+    name: 'Lenovo Tab M10 Plus',
+    price: 235,
+    description:
+      'Series	ZA5T0300US; Brand	Lenovo; Generation	2nd Generation; Screen Size	10.3 Inches; Operating System	Android 9 Pie',
+    rating: '4.5 / 5',
+    image: 'https://m.media-amazon.com/images/I/71sfODG+c+L._AC_SL1500_.jpg',
+    link: 'https://www.amazon.com/Lenovo-Android-Octa-Core-Processor-ZA5T0300US/dp/B083JXPDL5/ref=sr_1_52?qid=1647180703&rnid=13896617011&s=electronics&sr=1-52',
+    category: 'tabl',
+    likes: 5587,
+    flaglike: false,
+  },
+  {
+    id: 23,
+    name: 'Samsung Galaxy Tab A7',
+    price: 250,
+    description:
+      'Brand	Samsung Electronics; Screen Size	10.4 Inches; Operating System	Android; Memory Storage Capacity	32 GB; Color	Dark Gray',
+    rating: '4.3 / 5',
+    image: 'https://m.media-amazon.com/images/I/51JlOJeLp5L._AC_SL1000_.jpg',
+    link: 'https://www.amazon.com/Cellular-Unlocked-T-Mobile-International-SM-T505/dp/B08ZR64JWW/ref=sr_1_72?qid=1647180903&rnid=13896617011&s=electronics&sr=1-72',
+    category: 'tabl',
+    likes: 7423,
+    flaglike: false,
+  },
+  {
+    id: 24,
+    name: 'Apple Watch Series 6',
+    price: 289,
+    description:
+      'Brand	Apple; Color	Blue Aluminum Case; Special Feature	Time Display, Sleep Monitor, Text Messaging, GPS; Compatible Devices	Smartphone; Screen Size	44 Millimeters; Operating System	WatchOS; Age Range (Description)	Adult; Style	Deep Navy Sport Band; Connectivity Technology	GPS; Case Material	Aluminum',
+    rating: '4.5 / 5',
+    image: 'https://m.media-amazon.com/images/I/71DDA+p+QqL._AC_SL1500_.jpg',
+    link: 'https://www.amazon.com/New-Apple-Watch-GPS-44mm/dp/B08KTW1YD3/ref=sr_1_17?qid=1647181141&rnid=2407755011&s=electronics&sr=1-17',
+    category: 'watch',
+    likes: 6242,
+    flaglike: false,
+  },
+  {
+    id: 25,
+    name: 'Apple Watch SE',
+    price: 218,
+    description:
+      'Brand	Apple; Color	Gold Aluminum Case; Special Feature	Time Display, Sleep Monitor, Email, Text Messaging, GPS; Compatible Devices	Smartphone; Screen Size	40 Millimeters; Operating System	WatchOS; Age Range (Description)	Adult; Style	Pink Sand Sport Band; Connectivity Technology	Cellular, GPS; Case Material	Aluminum',
+    rating: '4.5 / 5',
+    image: 'https://m.media-amazon.com/images/I/713tzkDbs7L._AC_SL1500_.jpg',
+    link: 'https://www.amazon.com/Apple-Watch-SE-Cellular-40mm/dp/B08L3VTNQZ/ref=sr_1_34?qid=1647181369&rnid=2407755011&s=electronics&sr=1-34',
+    category: 'watch',
+    likes: 7386,
+    flaglike: false,
+  },
+  {
+    id: 26,
+    name: 'Samsung Galaxy Active 2 Smartwatch',
+    price: 140,
+    description:
+      'Brand	Samsung Electronics; Color	Pink Gold; Special Feature	Time Display, Sleep Monitor, Pedometer, Heart Rate Monitor; Compatible Devices	Smartphone; Screen Size	40 Millimeters; Operating System	Tizen OS; Age Range (Description)	Adult; Style	Modern; Supported Application	Sleep Monitor, Phone, Heart Rate Monitor; Wireless Communication Standard	802.11b',
+    rating: '4.6 / 5',
+    image: 'https://m.media-amazon.com/images/I/513xp2UrnrL._AC_SL1200_.jpg',
+    link: 'https://www.amazon.com/Samsung-Galaxy-Active-Smartwatch-Charging/dp/B081KB7T99/ref=sr_1_57?qid=1647181540&rnid=2407755011&s=electronics&sr=1-57',
+    category: 'watch',
+    likes: 8328,
+    flaglike: false,
+  },
+  {
+    id: 27,
+    name: 'SAMSUNG Galaxy Watch 4',
+    price: 213,
+    description:
+      'Brand	Samsung Electronics; Color	Pink; Special Feature	Time Display, Text Messaging, GPS;Compatible Devices	Smartphone; Screen Size	40 Millimeters; Age Range (Description)	Adult; Style	Modern; Connectivity Technology	Gps; Supported Application	Phone, GPS; Wireless Communication Standard	Bluetooth',
+    rating: '4.5 / 5',
+    image: 'https://m.media-amazon.com/images/I/612pEqP1x0L._AC_SL1500_.jpg',
+    link: 'https://www.amazon.com/SAMSUNG-Smartwatch-Bluetooth-International-Version/dp/B09D2XJ7RJ/ref=sr_1_61?qid=1647181692&rnid=2407755011&s=electronics&sr=1-61&th=1',
+    category: 'watch',
+    likes: 5530,
+    flaglike: false,
+  },
+  {
+    id: 28,
+    name: 'Samsung Electronics Gear S3',
+    price: 130,
+    description:
+      'Brand	Samsung Electronics; Color	Dark Grey; Special Feature	Time Display, Text Messaging, GPS, Notifications; Compatible Devices	Smartphone; Age Range (Description)	Adult; Style	Modern; Connectivity Technology	Bluetooth, Wi-Fi, USB; Supported Application	Phone, GPS; Wireless Communication Standard	Bluetooth; Band Color	Black',
+    rating: '3.7 / 5',
+    image: 'https://m.media-amazon.com/images/I/41eXy5vFFUL._AC_.jpg',
+    link: 'https://www.amazon.com/Samsung-Electronics-Gear-S3-Smartwatch/dp/B09MZPVWV4/ref=sr_1_72?qid=1647181692&rnid=2407755011&s=electronics&sr=1-72',
+    category: 'watch',
+    likes: 2426,
+    flaglike: false,
+  },
+  {
+    id: 29,
+    name: 'Google Pixel 3',
+    price: 255,
+    description:
+      'Model Name	Google Pixel 3; Wireless Carrier	Unlocked for All Carriers; Brand	Google; Form Factor	Smartphone; Memory Storage Capacity	64 GB; Operating System	Chrome OS, Android; Color	Just Black; Cellular Technology	4G; Included Components	Adapter; Screen Size	5.5 Inches',
+    rating: '3.9 / 5',
+    image: 'https://m.media-amazon.com/images/I/61YNb0vcezS._AC_SL1500_.jpg',
+    link: 'https://www.amazon.com/Google-Pixel-Unlocked-Smartphone-Charging/dp/B098V2B362/ref=sr_1_177?qid=1647183158&rnid=2811119011&s=electronics&sr=1-177',
+    category: 'smart',
+    likes: 912,
+    flaglike: false,
+  },
+  {
+    id: 30,
+    name: 'Samsung Galaxy A72',
+    price: 520,
+    description:
+      'Model Name	A72; Wireless Carrier	Unlocked for All Carriers; Brand	Samsung Electronics; Form Factor	Touchscreen; Memory Storage Capacity	256 GB; Color	Awesome Violet; Cellular Technology	4G; Year	2021; Screen Size	6.7 Inches; Display Type	AMOLED',
+    rating: '4.5 / 5',
+    image: 'https://m.media-amazon.com/images/I/71kqdSq3kjL._AC_SL1500_.jpg',
+    link: 'https://www.amazon.com/Samsung-Galaxy-A725F-DS-Factory-Unlocked/dp/B08WRN723M/ref=sr_1_147?qid=1647182174&rnid=2811119011&s=electronics&sr=1-147&th=1',
+    category: 'smart',
+    likes: 1858,
+    flaglike: false,
+  },
+];
+
+/*
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at https://angular.io/license
+*/
