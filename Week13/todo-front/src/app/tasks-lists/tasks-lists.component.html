@@ -1,0 +1,63 @@
+<ng-container>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav" *ngIf="!logged">
+        <a class="nav-item nav-link">Login or Register</a>
+      </div>
+      <div class="navbar-nav" *ngIf="logged">
+        <a class="nav-item nav-link" (click)="logout()">Logout</a>
+      </div>
+    </div>
+  </nav>
+  <div class="row">
+    <div class="column">
+      <div class="loginForm">
+        <div class="form" *ngIf="!logged">
+          <label for="username">Username:</label>
+          <span><input type="text"class="form-control" [(ngModel)]="username" /></span>
+          <label for="password">Password:</label>
+          <span><input type="password"class="form-control" [(ngModel)]="password" /></span>
+          <button class="btn btn-info" type="submit" (click)="login()">Login</button>
+        </div>
+      </div>
+    </div>
+    <div class="column">
+      <div class="registerForm">
+        <div class="form" *ngIf="!logged">
+          <label for="username">Username:</label>
+          <span><input type="text"class="form-control" [(ngModel)]="newUsername" /></span>
+          <label for="password">Password:</label>
+          <span><input type="password"class="form-control" [(ngModel)]="newPassword" /></span>
+          <button class="btn btn-info" type="submit" (click)="register()">Register</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container" *ngIf='logged'>
+    <div class="new_list">
+      <li class="list-group-item">
+        <ul class="list-group list-group-horizontal">
+          <li class="list-group-item">
+            <label for="list_name">Name</label>
+            <input type="text" class="form-control" [(ngModel)]="name" placeholder="Create new task list">
+          </li>
+          <li class="list-group-item">
+            <button type="submit" class="btn btn-info" (click)="createTaskList()">Create</button>
+          </li>
+        </ul>
+      </li>
+    </div>
+    <li class="list-group-item" *ngFor="let taskList of tasksLists">
+      <ul class="list-group list-group-horizontal">
+        <li class="list-group-item">{{taskList.id}}</li>
+        <li class="list-group-item">{{taskList.name}}</li>
+        <li class="list-group-item">
+          <a routerLink="/tasks_lists/{{taskList.id}}/"><button type="button" class="btn btn-info">Detail</button></a>
+        </li>
+        <li class="list-group-item">
+          <a routerLink="/tasks_lists/{{taskList.id}}/tasks"><button type="button" class="btn btn-info">Tasks</button></a>
+        </li>
+      </ul>
+    </li>
+  </div>
+</ng-container>
